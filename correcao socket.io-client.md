@@ -1,0 +1,2 @@
+Could not find a declaration file for module 'socket.io-client'. 'c:/laragon/www/news/node_modules/socket.io-client/lib/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/socket.io-client` if it exists or add a new declaration (.d.ts) file containing `declare module 'socket.io-client';`ts(7016)

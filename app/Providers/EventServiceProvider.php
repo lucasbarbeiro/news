@@ -2,6 +2,18 @@
 
 namespace App\Providers;
 
+use App\Events\{
+    PostCreated
+};
+use App\Listeners\{
+    NotifyUsersNewPostCreated
+};
+use App\Models\{
+    Post
+};
+use App\Observers\{
+    PostObserver
+};
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -18,6 +30,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        //relacionamento do listener com o evento
+        PostCreated::class => [
+            NotifyUsersNewPostCreated::class,
+        ]
     ];
 
     /**
@@ -27,7 +43,8 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //relacionamento do observer com o model
+        Post::observe(PostObserver::class);
     }
 
     /**

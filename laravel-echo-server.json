@@ -1,5 +1,5 @@
 {
-	"authHost": "http://news.test:8080/",
+	"authHost": "http://news.test/",
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [
 		{
@@ -30,7 +30,7 @@
 	},
 	"apiOriginAllow": {
 		"allowCors": true,
-		"allowOrigin": "http://news.test:8080/",
+		"allowOrigin": "http://news.test/",
 		"allowMethods": "GET, POST",
 		"allowHeaders": "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
 	}

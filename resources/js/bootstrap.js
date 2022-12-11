@@ -39,6 +39,8 @@ window.io = io;
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
-    host: window.location.hostname
+    host: window.location.hostname + ':6001'
+    //host: import.meta.env.SOCKET_IO_HOST + ':' + import.meta.env.SOCKET_IO_PORT
+});
 
-})
+const module = await import('./Echo')
