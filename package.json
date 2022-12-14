@@ -10,14 +10,15 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^3.2.5",
-        "vite-plugin-full-reload": "^1.0.5"
+        "vite-plugin-full-reload": "^1.0.5",
+        "vue-loader": "^17.0.1",
+        "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^4.0.0",
         "laravel-echo": "^1.14.1",
         "socket.io-client": "^2.3.0",
         "vue": "^2.6.12",
-        "vue-loader": "^17.0.1",
         "vue-toastify": "^1.8.1"
     }
 }
