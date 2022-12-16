@@ -4,9 +4,9 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 //import path from 'path'
 
-export default defineConfig({  //()
+export default defineConfig({
   //.withLaraonCertificates()
-  //.withPlugins(vue, components)
+  //.withPlugins(vue)
   //.merge({
   server: {
     //host: '0.0.0.0',
@@ -21,10 +21,10 @@ export default defineConfig({  //()
         port: '6001',
         ws: true,
     },*/
-    watch: {
-      //ignored: ['!**/node_modules/your-package-name/**'],
-      usePolling: true,
-    },
+    //watch: {
+    //ignored: ['!**/node_modules/your-package-name/**'],
+    //  usePolling: true,
+    //},
     /* with options: http://localhost:5173/api/bar-> http://jsonplaceholder.typicode.com/bar
   '/api': {
     target: 'http://jsonplaceholder.typicode.com',
@@ -56,14 +56,17 @@ export default defineConfig({  //()
       },
     }),
     laravel({
-      input: ['resources/css/app.css', 'resources/js/app.js'],
+      input: [
+        'resources/css/app.css',
+        'resources/js/app.js',
+        'resources/js/components/Posts/*'
+      ],
       refresh: true,
     }),
   ],
-  /*resolve: {
+  /*  resolve: {
       alias: {
-          '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-          '@': '/resources/js',
+        'vue': 'vue/dist/vue.esm-bundler.js'
       }
   },*/
 });

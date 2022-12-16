@@ -1,4 +1,4 @@
-import Vue from 'vue';
+//import Vue from 'vue';
 
 window.Echo.channel('news_database_post-created')
     .listen('PostCreated', (e) => {
