@@ -5,5 +5,5 @@ window.Echo.channel('news_database_post-created')
         console.log(e.post)
 
         toast.success('Novo Post');
-
+        //converter a variável (e) para String e retornar no toast
     });
