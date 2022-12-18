@@ -22,7 +22,6 @@
         "laravel-echo": "^1.14.1",
         "socket.io-client": "^2.3.0",
         "vue": "^3.2.36",
-        "vue-toastify": "^1.8.1",
         "vue3-toastify": "^0.0.4"
     }
 }

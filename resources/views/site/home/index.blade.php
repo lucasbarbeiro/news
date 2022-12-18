@@ -4,5 +4,5 @@
 
 @section('content')
     #home do site dentro do 'layouts' <br/>
-        <postsc />    
+        <postsc />   
 @endsection
