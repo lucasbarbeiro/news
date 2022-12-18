@@ -3,7 +3,6 @@ import { toast } from 'vue3-toastify';
 window.Echo.channel('news_database_post-created')
     .listen('PostCreated', (e) => {
         console.log(e.post)
-
-        toast.success('Novo Post');
-        //converter a variável (e) para String e retornar no toast
+        const myJSON = JSON.stringify('Novo Post: ' + e.post.title);
+        toast.success(myJSON);
     });
