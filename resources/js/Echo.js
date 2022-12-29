@@ -1,5 +1,5 @@
 import { toast } from 'vue3-toastify';
-import emitter from 'mitt';
+import mitt from 'mitt';
 
 const emitter = mitt()
 

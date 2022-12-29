@@ -8,6 +8,9 @@ import { createApp } from 'vue/dist/vue.esm-bundler.js';
 import VueToastify, { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
 import postsc from './components/Posts/Posts.vue';
+import mitt from 'mitt';
+
+const emitter = mitt()
 
 const app = createApp({
     name: 'app',
@@ -16,5 +19,5 @@ const app = createApp({
         'toastify': VueToastify
     },
 });
-
+app.config.globalProperties.emitter = emitter
 app.mount('#app');
